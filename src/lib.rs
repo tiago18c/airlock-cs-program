@@ -21,8 +21,8 @@ pub fn process_instruction(
     instruction_data: &[u8],
 ) -> ProgramResult {
     match instruction_data.first() {
-        Some(1) => log("Goodbye from the Airlock clear signing demo: build 3"),
-        _ => log("Hello from the Airlock clear signing demo: build 3"),
+        Some(1) => log("Goodbye from the Airlock clear signing demo: build 4"),
+        _ => log("Hello from the Airlock clear signing demo: build 4"),
     }
     Ok(())
 }

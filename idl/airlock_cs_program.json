@@ -6,7 +6,7 @@
     "kind": "programNode",
     "name": "airlockCsProgram",
     "publicKey": "eiMeJF72bc52wjXcVFSEZNnYk2R28aZhekSGqztsQ4m",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "origin": "shank",
     "docs": [
       "A program that says hello and goodbye. It exists to be upgraded through a",
@@ -19,7 +19,7 @@
         "kind": "instructionNode",
         "name": "hello",
         "docs": [
-          "Logs a greeting. It takes no accounts."
+          "Logs a greeting, naming the build that says it. It takes no accounts."
         ],
         "optionalAccountStrategy": "programId",
         "accounts": [],

@@ -13,7 +13,7 @@ dependencies = [
 
 [[package]]
 name = "airlock-cs-program"
-version = "0.3.0"
+version = "0.4.0"
 dependencies = [
  "pinocchio",
  "solana-program-log",
