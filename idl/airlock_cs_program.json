@@ -6,11 +6,11 @@
     "kind": "programNode",
     "name": "airlockCsProgram",
     "publicKey": "eiMeJF72bc52wjXcVFSEZNnYk2R28aZhekSGqztsQ4m",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "origin": "shank",
     "docs": [
-      "A program that says hello. It exists to be upgraded through a multisig",
-      "in Airlock's clear signing showcase."
+      "A program that says hello and goodbye. It exists to be upgraded through a",
+      "multisig in Airlock's clear signing showcase."
     ],
     "pdas": [],
     "accounts": [],
@@ -18,7 +18,9 @@
       {
         "kind": "instructionNode",
         "name": "hello",
-        "docs": ["Logs a greeting. It takes no accounts."],
+        "docs": [
+          "Logs a greeting. It takes no accounts."
+        ],
         "optionalAccountStrategy": "programId",
         "accounts": [],
         "arguments": [
@@ -26,13 +28,57 @@
             "kind": "instructionArgumentNode",
             "name": "discriminator",
             "docs": [],
-            "type": { "kind": "numberTypeNode", "format": "u8", "endian": "le" },
-            "defaultValue": { "kind": "numberValueNode", "number": 0 },
+            "type": {
+              "kind": "numberTypeNode",
+              "format": "u8",
+              "endian": "le"
+            },
+            "defaultValue": {
+              "kind": "numberValueNode",
+              "number": 0
+            },
             "defaultValueStrategy": "omitted"
           }
         ],
         "discriminators": [
-          { "kind": "fieldDiscriminatorNode", "name": "discriminator", "offset": 0 }
+          {
+            "kind": "fieldDiscriminatorNode",
+            "name": "discriminator",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "kind": "instructionNode",
+        "name": "goodbye",
+        "docs": [
+          "Logs a farewell. It takes no accounts."
+        ],
+        "optionalAccountStrategy": "programId",
+        "accounts": [],
+        "arguments": [
+          {
+            "kind": "instructionArgumentNode",
+            "name": "discriminator",
+            "docs": [],
+            "type": {
+              "kind": "numberTypeNode",
+              "format": "u8",
+              "endian": "le"
+            },
+            "defaultValue": {
+              "kind": "numberValueNode",
+              "number": 1
+            },
+            "defaultValueStrategy": "omitted"
+          }
+        ],
+        "discriminators": [
+          {
+            "kind": "fieldDiscriminatorNode",
+            "name": "discriminator",
+            "offset": 0
+          }
         ]
       }
     ],

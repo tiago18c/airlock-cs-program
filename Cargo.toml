@@ -1,6 +1,6 @@
 [package]
 name = "airlock-cs-program"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "A hello-world Solana program, upgraded through a multisig in Airlock's clear signing showcase"
 license = "MIT"

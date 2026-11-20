@@ -1,6 +1,6 @@
 # airlock-cs-program
 
-A Solana program that says hello and does nothing else, written with
+A Solana program that says hello and goodbye and does nothing else, written with
 [pinocchio](https://github.com/anza-xyz/pinocchio). It exists to be upgraded:
 [Airlock](https://github.com/tiago18c/airlock)'s showcase proposes its next build through a Squads
 multisig, where each member's vote lands only if the upgrade's buffer holds the build that member
