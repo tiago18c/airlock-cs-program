@@ -1,0 +1,43 @@
+{
+  "kind": "rootNode",
+  "standard": "codama",
+  "version": "1.0.0",
+  "program": {
+    "kind": "programNode",
+    "name": "airlockCsProgram",
+    "publicKey": "eiMeJF72bc52wjXcVFSEZNnYk2R28aZhekSGqztsQ4m",
+    "version": "0.1.0",
+    "origin": "shank",
+    "docs": [
+      "A program that says hello. It exists to be upgraded through a multisig",
+      "in Airlock's clear signing showcase."
+    ],
+    "pdas": [],
+    "accounts": [],
+    "instructions": [
+      {
+        "kind": "instructionNode",
+        "name": "hello",
+        "docs": ["Logs a greeting. It takes no accounts."],
+        "optionalAccountStrategy": "programId",
+        "accounts": [],
+        "arguments": [
+          {
+            "kind": "instructionArgumentNode",
+            "name": "discriminator",
+            "docs": [],
+            "type": { "kind": "numberTypeNode", "format": "u8", "endian": "le" },
+            "defaultValue": { "kind": "numberValueNode", "number": 0 },
+            "defaultValueStrategy": "omitted"
+          }
+        ],
+        "discriminators": [
+          { "kind": "fieldDiscriminatorNode", "name": "discriminator", "offset": 0 }
+        ]
+      }
+    ],
+    "definedTypes": [],
+    "errors": []
+  },
+  "additionalPrograms": []
+}

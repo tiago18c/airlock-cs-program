@@ -1,0 +1,30 @@
+[package]
+name = "airlock-cs-program"
+version = "0.1.0"
+edition = "2021"
+description = "A hello-world Solana program, upgraded through a multisig in Airlock's clear signing showcase"
+license = "MIT"
+repository = "https://github.com/tiago18c/airlock-cs-program"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+pinocchio = "0.12.0"
+solana-program-log = "1"
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+opt-level = "z"
+overflow-checks = true
+panic = "abort"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }
+
+# The Solana tools the reproducible build runs with: solana-verify takes its
+# Docker image from this version, as there is no solana-program in the lock.
+[workspace.metadata.cli]
+solana = "3.1.14"
